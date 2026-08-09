@@ -3,8 +3,11 @@ require("dotenv").config();
 const app = require("./app");
 const connectDB = require("./config/db");
 const router = require("./routes/authRoutes");
+const documentRouter = require("./routes/documentRoutes");
 
 app.use("/user", router);
+app.use("/document", documentRouter);
+
 
 const port = process.env.PORT || 3000;
 
